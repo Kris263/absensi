@@ -54,3 +54,12 @@ label {
     margin-bottom: 12px;
     padding: 8px;
 }
+
+.notif-login {
+    background-color: rgba(0, 225, 255, 0.271);
+    color: white;
+    font-style: italic;
+    text-align: center;
+    padding: 8px;
+    margin: 4px;
+}
