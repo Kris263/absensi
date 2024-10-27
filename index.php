@@ -15,9 +15,9 @@
             <div>
                 <form action="login.php" method="POST" class="form-login">
                     <label for="">Masukkan nomor induk</label>
-                    <input type="number" placeholder="Nomor Induk Pegawai" name="nip" class="input-login">
+                    <input type="number" placeholder="Nomor Induk Pegawai" name="nomor_induk" class="input-login">
                     <label for="">Masukkan password</label>
-                    <input type="password" placeholder="******" name="password" class="input-login">
+                    <input type="password" placeholder="******" name="pass" class="input-login">
                     <button type="submit" class="button-login" name="login">Login</button>
                 </form>
             </div>
