@@ -1,7 +1,7 @@
 <?php 
     session_start();    
 
-    if (!isset($_SESSIOn['status']) || $_SESSION['status'] != "login") {
+    if (!isset($_SESSION['status']) || $_SESSION['status'] != "login") {
         header("location:../index.php?message=Silahkan login terlebih dahulu");
     }
 
@@ -9,6 +9,7 @@
         session_destroy();
         header("location: ../index.php?message=Keluar dari sistem");
     }
+
         
 ?>
 
@@ -27,8 +28,22 @@
         <p>Status Pegawai: <?php echo $_SESSION['role'];?></p>
         <br>
         <div>
-            test
+            <table border="1">
+                <tr>
+                    <th>Tanggal</th>
+                    <th>Jam Masuk</th>
+                    <th>Jam Keluar</th>
+                    <th>Performa</th>
+                </tr>
+                <!-- INI DATA ABSEN -->
+                <?php include "absensi.php";?>
+                <!-- STOP IN HERE -->
+            </table>
         </div>
+        <br>
+        <form action="" method="POST">
+            <button type="submit" name="btn-absen">Absen sekarang</button>
+        </form>
         <br>
         <form action="" method="POST">
             <button name="btn-logout">LOGOUT</button>

@@ -30,8 +30,4 @@ if (isset($_POST['login'])) {
         }
     }   
 }
-
-if (isset($_GET[header("location:./dashboard/index.php")])) {
-    echo "Hello mamang balik lagi gih";
-}
 ?>
