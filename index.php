@@ -1,3 +1,13 @@
+<?php 
+session_start();
+
+if (isset($_SESSION['status']) && $_SESSION['status'] == "login") {
+    header("location:./dashboard/index.php");
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
