@@ -27,23 +27,12 @@
         <h3>Halo <?php echo $_SESSION['nama_lengkap'];?></h3>
         <p>Status Pegawai: <?php echo $_SESSION['role'];?></p>
         <br>
-        <div>
-            <table border="1">
-                <tr>
-                    <th>Tanggal</th>
-                    <th>Jam Masuk</th>
-                    <th>Jam Keluar</th>
-                    <th>Performa</th>
-                </tr>
-                <!-- INI DATA ABSEN -->
-                <?php include "absensi.php";?>
-                <!-- STOP IN HERE -->
-            </table>
-        </div>
-        <br>
-        <form action="" method="POST">
-            <button type="submit" name="btn-absen">Absen sekarang</button>
-        </form>
+        <?php
+        if (isset($_GET['message']))
+            echo $_GET['message'];
+        ?>
+        <!-- Table Absen -->
+        <?php include "absensi.php";?>
         <br>
         <form action="" method="POST">
             <button name="btn-logout">LOGOUT</button>
