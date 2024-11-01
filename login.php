@@ -28,6 +28,10 @@ if (isset($_POST['login'])) {
         } else {
             header("location: ./index.php?message=NIP atau Password SALAH");
         }
+
+        if ($_SESSION['role'] == "admin") {
+            header("location: ./dashboard/index-admin.php");
+        }   
     }   
 }
 ?>
